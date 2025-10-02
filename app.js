@@ -1,8 +1,11 @@
 //var createError = require('http-errors');
 const express = require("express");
+const cors = require("cors");
 const path = require("path");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
+const dotenv = require("dotenv");
+dotenv.config();
 
 //var indexRouter = require("./routes/index");
 //var usersRouter = require("./routes/users");
