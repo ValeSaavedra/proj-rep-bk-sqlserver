@@ -1,0 +1,21 @@
+const { parse } = require("json2csv");
+
+const conviertoJson2CSV = (j) => {
+  return parse(j, { delimiter: ";" });
+};
+
+const conviertoFecha = () => {
+  const dia = newDate();
+  const year = dia.getFullYear();
+  const month = dia.getMonth() + 1;
+  const monthStr = month.toString().padStart(2, "0");
+  const day = dia.getDate().toString().padStart(2, "0");
+  const hours = dia.getHours().toString().padStart(2, "0");
+  const minutes = dia.getMinutes().toString().padStart(2, "0");
+  return year + monthStr + day + "_" + hours + minutes;
+};
+
+module.exports = {
+  conviertoJson2CSV,
+  conviertoFecha,
+};
