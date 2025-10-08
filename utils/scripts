@@ -5,7 +5,7 @@ const conviertoJson2CSV = (j) => {
 };
 
 const conviertoFecha = () => {
-  const dia = newDate();
+  const dia = new Date();
   const year = dia.getFullYear();
   const month = dia.getMonth() + 1;
   const monthStr = month.toString().padStart(2, "0");
